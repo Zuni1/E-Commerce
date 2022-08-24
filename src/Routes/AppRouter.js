@@ -1,16 +1,16 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import Container from './Navbar/Container'
-import ProtectedRoute from './Routes/ProtectedRoute'
-import Index from './Components/Vudu/Index'
-import Movies from './Components/Movies/Movies'
-import Tv from './Components/Tv/Tv'
-import Free from './Components/Free/Free'
-import Cart from './Components/Cart/Cart' 
-import Login from './Components/Login/Login'
+import Container from '../Navbar/Container'
+import ProtectedRoute from './ProtectedRoute'
+import Index from '../Components/Vudu/Index'
+import Movies from '../Components/Movies/Movies'
+import Tv from '../Components/Tv/Tv'
+import Free from '../Components/Free/Free'
+import Cart from '../Components/Cart/Cart' 
+import Login from '../Components/Login/Login'
 
-const App = () => {
+const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -29,4 +29,4 @@ const App = () => {
   )
 }
 
-export default App
+export default AppRouter
