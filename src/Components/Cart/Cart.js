@@ -1,11 +1,16 @@
 import React from 'react'
 import { Grid, Box, Typography, Button, Rating } from '@mui/material'
+import { useSelector, useDispatch } from 'react-redux'
+
+import {Increment} from '../../Redux/Reducer'
 import Review from './Review/Review';
 
 const Card = () => {
 
   const [value, setValue] = React.useState(2);
   const [showMore, setShowMore] = React.useState(false)
+  const myState = useSelector(state => state.user.cart)
+  const dispatch = useDispatch()
 
   const text="PURCHASE ELVIS GET THE 5-MOVIE ELVIS BUNDLE FOR $17.99. A thoroughly cinematic drama, Elvis's story is seen through the prism of his complicated relationship with his enigmatic manager, Colonel Tom Parker. As told by Parker, the film delves into the complex dynamic between the two spanning over 20 years, from Presley's rise to fame to his unprecedented stardom, against the backdrop of the evolving cultural landscape and loss of innocence in America. Central to that journey is one of the significant and influential people in Elvis's life, Priscilla Presley."
 
@@ -21,7 +26,7 @@ const Card = () => {
     },
     items: {
       padding: '20px',
-      width: '25%',
+      width: '40%',
     },
     review: {
       padding: '40px',
@@ -51,15 +56,32 @@ const Card = () => {
             <Button sx={{width: '45%'}} variant="outlined">⊕ List</Button>
           </Grid>
           
-            <Typography variant="body1" gutterBottom>
-              {showMore ? text : `${text.substring(0, 200)} ...`}
-              <Button sx={{fontWeight: 'bold', marginLeft: '20px'}} onClick={() => setShowMore(!showMore)}> {showMore ? "Less" : "More"} </Button>
-            </Typography>
-            <Grid container sx={{display: 'flex', justifyContent: 'space-between', marginBottom: '15px'}}>
-              <Button sx={{width: '45%'}} variant="contained">Rent $19.99</Button>
+          <Typography variant="body1" gutterBottom>
+            {showMore ? text : `${text.substring(0, 200)} ...`}
+            <Button sx={{fontWeight: 'bold', marginLeft: '20px'}} onClick={() => setShowMore(!showMore)}> {showMore ? "Less" : "More"} </Button>
+          </Typography>
+          
+          <Grid container sx={{display: 'flex', justifyContent: 'space-between', marginBottom: '15px'}}>
+            <Button sx={{width: '45%'}} variant="contained">Rent $19.99</Button>
             <Button sx={{width: '45%'}} variant="contained">Buy $24.99</Button>
           </Grid>
         </Box>
+        
+        <Grid container sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+          <Typography variant="h5" gutterBottom>Add To Cart</Typography>
+
+          <Grid sx={{display: 'flex'}}>
+            <Button variant='contained' onClick={() => dispatch(Increment())}>
+              <Typography variant="h6" gutterBottom> + </Typography>
+            </Button>
+
+            <Typography sx={{ml: 2, mr: 2}} variant="h5" gutterBottom>{myState}</Typography>
+
+            <Button variant='contained' onClick={() => dispatch(Increment())}>
+              <Typography variant="h6" gutterBottom> - </Typography>
+            </Button>
+          </Grid>
+        </Grid>
       </Grid>
 
       <Grid style={style.review}>

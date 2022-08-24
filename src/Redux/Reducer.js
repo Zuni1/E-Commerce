@@ -4,7 +4,8 @@ import { createSlice } from "@reduxjs/toolkit";
     user: null,
     movies: [],
     loading: false,
-    error: ''
+    error: '',
+    cart: 0
   }
 
   export const fetchMovies = () => {
@@ -47,9 +48,12 @@ import { createSlice } from "@reduxjs/toolkit";
         state.movies = []
         state.error = action.payload
       },
+      Increment: (state, action) => {
+        state.cart = action.payload + 1
+      }
     }
   })
   
-export const {login, logout, fetchRequest, fetchSuccess, fetchFailure} = info.actions
+export const {login, logout, fetchRequest, fetchSuccess, fetchFailure, Increment} = info.actions
 
 export default info.reducer
