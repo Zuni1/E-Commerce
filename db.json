@@ -4,25 +4,78 @@
       "id": 1,
       "title": "New Releases",
       "name": "Orphan First Kill",
-      "image": "https://images2.vudu.com/poster2/2072433-168"
+      "image": "https://images2.vudu.com/poster2/2072433-168",
+      "price": "$27.99",
+      "description": "PURCHASE ELVIS GET THE 5-MOVIE ELVIS BUNDLE FOR $17.99. A thoroughly cinematic drama, Elvis's story is seen through the prism of his complicated relationship with his enigmatic manager, Colonel Tom Parker. As told by Parker, the film delves into the complex dynamic between the two spanning over 20 years, from Presley's rise to fame to his unprecedented stardom, against the backdrop of the evolving cultural landscape and loss of innocence in America. Central to that journey is one of the significant and influential people in Elvis's life, Priscilla Presley.",
+      "reviewTitle": "Matt Neal",
+      "caption": "ReelViews",
+      "review": "The characters make some obligatory dumb decisions, but most of Stalked is admirably sparse and brutal."
     },
     {
       "id": 2,
       "title": "Top 200 Movies",
       "name": "Black Phone",
-      "image": "https://images2.vudu.com/poster2/2040357-168"
-    },
-    {
-      "title": "Deals of the Week",
-      "name": "Black Phone",
       "image": "https://images2.vudu.com/poster2/2040357-168",
-      "id": 3
+      "price": "$38.99",
+      "description": "PURCHASE ELVIS GET THE 5-MOVIE ELVIS BUNDLE FOR $17.99. A thoroughly cinematic drama, Elvis's story is seen through the prism of his complicated relationship with his enigmatic manager, Colonel Tom Parker. As told by Parker, the film delves into the complex dynamic between the two spanning over 20 years, from Presley's rise to fame to his unprecedented stardom, against the backdrop of the evolving cultural landscape and loss of innocence in America. Central to that journey is one of the significant and influential people in Elvis's life, Priscilla Presley.",
+      "reviewTitle": "Joe Morgenstern",
+      "caption": "TheIndependentCritic.com",
+      "review": "Baz Luhrmanns bejeweled battering ram of a biopic is all over the place, which can be distracting, but the grit and grace of Austin Butlers performance as The King is a thing of beauty. A star is born right here."
     },
     {
+      "id": 3,
+      "title": "Deals of the Week",
+      "name": "The Reef: Stalked",
+      "image": "https://images2.vudu.com/poster2/2071695-168",
+      "price": "$41.99",
+      "description": "PURCHASE ELVIS GET THE 5-MOVIE ELVIS BUNDLE FOR $17.99. A thoroughly cinematic drama, Elvis's story is seen through the prism of his complicated relationship with his enigmatic manager, Colonel Tom Parker. As told by Parker, the film delves into the complex dynamic between the two spanning over 20 years, from Presley's rise to fame to his unprecedented stardom, against the backdrop of the evolving cultural landscape and loss of innocence in America. Central to that journey is one of the significant and influential people in Elvis's life, Priscilla Presley.",
+      "reviewTitle": "Marc Lee",
+      "caption": "Chicago Reader",
+      "review": "A wildly over-the-top and extremely entertaining biopic of Elvis Presley."
+    },
+    {
+      "id": 4,
+      "title": "In Theaters",
+      "name": "Gone in the Night",
+      "image": "https://images2.vudu.com/poster2/2072603-168",
+      "price": "$19.99",
+      "description": "PURCHASE ELVIS GET THE 5-MOVIE ELVIS BUNDLE FOR $17.99. A thoroughly cinematic drama, Elvis's story is seen through the prism of his complicated relationship with his enigmatic manager, Colonel Tom Parker. As told by Parker, the film delves into the complex dynamic between the two spanning over 20 years, from Presley's rise to fame to his unprecedented stardom, against the backdrop of the evolving cultural landscape and loss of innocence in America. Central to that journey is one of the significant and influential people in Elvis's life, Priscilla Presley.",
+      "reviewTitle": "William Thomas",
+      "caption": "Empire Magazine",
+      "review": "I liked it, though my corneas did feel a little crunchy afterward."
+    },
+    {
+      "id": 5,
       "title": "In Theaters",
       "name": "DC League of Super-Pets",
       "image": "https://images2.vudu.com/poster2/2083672-168",
-      "id": 4
+      "price": "$26.99",
+      "description": "PURCHASE ELVIS GET THE 5-MOVIE ELVIS BUNDLE FOR $17.99. A thoroughly cinematic drama, Elvis's story is seen through the prism of his complicated relationship with his enigmatic manager, Colonel Tom Parker. As told by Parker, the film delves into the complex dynamic between the two spanning over 20 years, from Presley's rise to fame to his unprecedented stardom, against the backdrop of the evolving cultural landscape and loss of innocence in America. Central to that journey is one of the significant and influential people in Elvis's life, Priscilla Presley.",
+      "reviewTitle": "Luke Y. Thompson",
+      "caption": "Wall Street Journal",
+      "review": "A fun and exciting space action adventure in the 'Guardians of the Galaxy' mold which takes a bold and controversial twist that makes for some interesting, nuanced storytelling."
+    },
+    {
+      "id": 6,
+      "title": "In Theaters",
+      "name": "Hunting Souls",
+      "image": "https://images2.vudu.com/poster2/2000230-168",
+      "price": "$37.99",
+      "description": "PURCHASE ELVIS GET THE 5-MOVIE ELVIS BUNDLE FOR $17.99. A thoroughly cinematic drama, Elvis's story is seen through the prism of his complicated relationship with his enigmatic manager, Colonel Tom Parker. As told by Parker, the film delves into the complex dynamic between the two spanning over 20 years, from Presley's rise to fame to his unprecedented stardom, against the backdrop of the evolving cultural landscape and loss of innocence in America. Central to that journey is one of the significant and influential people in Elvis's life, Priscilla Presley.",
+      "reviewTitle": "Pat Padua",
+      "caption": "London Evening Standard",
+      "review": "This isn't a good film, but, when set alongside the likes of Dumb and Dumberer and Legally Blonde 2, Jen & Ben offer less pain."
+    },
+    {
+      "id": 7,
+      "title": "In Theaters",
+      "name": "Minions: The Rise of Gru",
+      "image": "https://images2.vudu.com/poster2/2060760-168",
+      "price": "$24.99",
+      "description": "PURCHASE ELVIS GET THE 5-MOVIE ELVIS BUNDLE FOR $17.99. A thoroughly cinematic drama, Elvis's story is seen through the prism of his complicated relationship with his enigmatic manager, Colonel Tom Parker. As told by Parker, the film delves into the complex dynamic between the two spanning over 20 years, from Presley's rise to fame to his unprecedented stardom, against the backdrop of the evolving cultural landscape and loss of innocence in America. Central to that journey is one of the significant and influential people in Elvis's life, Priscilla Presley.",
+      "reviewTitle": "Joe Leydon",
+      "caption": "The Australian",
+      "review": "It has atmosphere and tension, and the performances are far better than usual for this sort of caper."
     }
   ]
 }

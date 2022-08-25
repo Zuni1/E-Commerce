@@ -1,7 +1,7 @@
 import React from "react";
-import { Button, Grid, Typography } from '@mui/material'
-import {Link} from 'react-router-dom';
+import { Grid, Typography } from '@mui/material'
 import Avatar from '@mui/material/Avatar';
+import { useTranslation } from "react-i18next";
 
 import FooterComponent from "./FooterComponent";
 import appStore from '../../../images/appStore.png'
@@ -10,6 +10,8 @@ import microsoft from '../../../images/microsoft.png'
 import FooterComponent2 from "./FooterComponent2";
 
 const Footer = () => {
+
+    const { t } = useTranslation();
 
     const style = {
         bottomLink: {
@@ -37,43 +39,43 @@ const Footer = () => {
         </Grid>
         <Grid item xs={6} md={2}>
             <FooterComponent
-                heading="Watch"
-                n1="Spotlight"
-                n2="Movies"
-                n3="Tv"
-                n4="Free"
+                heading={t('Watch')}
+                n1={t('Spotlight')}
+                n2={t('Movies')}
+                n3={t('Tv')}
+                n4={t('Free')}
             />
         </Grid>
         <Grid item xs={6} md={2}>
             <FooterComponent
-                heading="My Account"
-                n1="My Vudu"
-                n2="Account"
-                n3="Settings"
-                n4="Manage Devices"
+                heading={t('My Account')}
+                n1={t('My Vudu')}
+                n2={t('Account')}
+                n3={t('Settings')}
+                n4={t('Manage Devices')}
             />
         </Grid>
         <Grid item xs={6} md={2}>
             <FooterComponent
-                heading="Features"
-                n1="Lists"
-                n2="Family"
-                n3="Disc to Digital"
-                n4="Movies Anywhere"
-                n5="Gift Cards"
+                heading={t('Features')}
+                n1={t('Lists')}
+                n2={t('Family')}
+                n3={t('Disc to Digital')}
+                n4={t('Movies Anywhere')}
+                n5={t('Gift Cards')}
             />
         </Grid>
         <Grid item xs={6} md={6}>
             <FooterComponent
-                heading="Help"
-                n1="About Us"
-                n2="Devices"
-                n3="Customer Support"
-                n4="Forums"
-                n5="Contact Us"
-                n6="Advertise"
-                n7="Accessibility"
-                n8="Jobs"
+                heading={t('Help')}
+                n1={t('About Us')}
+                n2={t('Devices')}
+                n3={t('Customer Support')}
+                n4={t('Forums')}
+                n5={t('Contact Us')}
+                n6={t('Advertise')}
+                n7={t('Accessibility')}
+                n8={t('Jobs')}
             />
         </Grid>
 
@@ -86,11 +88,11 @@ const Footer = () => {
 
         <Grid container sx={style.bottomLink}>
             <Grid container item md={8}>
-                <FooterComponent2 name='Terms and Policies' />
-                <FooterComponent2 name='Your Privacy Rights - Privacy Policy' />
-                <FooterComponent2 name='AdChoices' />
-                <FooterComponent2 name='Do Not Sell My Personal Information' />
-                <FooterComponent2 name='California Notice' />
+                <FooterComponent2 name={t('Terms and Policies')} />
+                <FooterComponent2 name={t('Your Privacy Rights - Privacy Policy')} />
+                <FooterComponent2 name={t('AdChoices')} />
+                <FooterComponent2 name={t('Do Not Sell My Personal Information')} />
+                <FooterComponent2 name={t('California Notice')} />
             </Grid>
 
             <Grid>
@@ -98,7 +100,7 @@ const Footer = () => {
                     variant="subtitle2" 
                     gutterBottom
                     // sx={{color: "white"}}
-                > © 2022 Fandango </Typography>
+                > © 2022 {t('Fandango')} </Typography>
             </Grid>
         </Grid>
     </Grid>

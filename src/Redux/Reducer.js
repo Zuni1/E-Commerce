@@ -8,6 +8,21 @@ import { createSlice } from "@reduxjs/toolkit";
     cart: 0
   }
 
+  export const fetchMovies = () => {
+    return function (dispatch) {
+        dispatch(fetchRequest())
+        fetch("http://localhost:3000/movies")
+        .then(res => res.json())
+        .then(res => {
+            dispatch(fetchSuccess(res))
+        })
+        .catch(error => {
+            dispatch(fetchFailure(error.message))
+            console.log(error)
+        })
+    }
+  }
+
   const info = createSlice({
     name: "user",
     initialState,
