@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid, Box, Typography, Button, Rating } from '@mui/material'
 import { useSelector, useDispatch } from 'react-redux'
 
-import {Increment} from '../../Redux/Reducer'
+import {Increment, Decrement} from '../../Redux/Reducer'
 import Review from './Review/Review';
 
 const Card = () => {
@@ -26,7 +26,7 @@ const Card = () => {
     },
     items: {
       padding: '20px',
-      width: '40%',
+      width: '45%',
     },
     review: {
       padding: '40px',
@@ -62,25 +62,46 @@ const Card = () => {
           </Typography>
           
           <Grid container sx={{display: 'flex', justifyContent: 'space-between', marginBottom: '15px'}}>
-            <Button sx={{width: '45%'}} variant="contained">Rent $19.99</Button>
             <Button sx={{width: '45%'}} variant="contained">Buy $24.99</Button>
+            <Button sx={{width: '45%'}} variant="contained" onClick={() => dispatch(Increment())}>Add to Cart</Button>
           </Grid>
         </Box>
         
-        <Grid container sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-          <Typography variant="h5" gutterBottom>Add To Cart</Typography>
+        <Grid container sx={{display: 'flex', flexDirection: 'column', ml: '8%'}}>
+          <Typography variant="h5" gutterBottom>Your Cart</Typography>
 
-          <Grid sx={{display: 'flex'}}>
-            <Button variant='contained' onClick={() => dispatch(Increment())}>
-              <Typography variant="h6" gutterBottom> + </Typography>
-            </Button>
+          <Box sx={{border: '1px solid #003452', padding: '10px'}}>
+            <Typography sx={{fontWeight: 'bold'}} variant="h5" gutterBottom>Elvis</Typography>
+            
+              <Grid sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+                <img style={style.img} src='https://images2.vudu.com/poster2/1196579-168' />
 
-            <Typography sx={{ml: 2, mr: 2}} variant="h5" gutterBottom>{myState}</Typography>
+                <Grid>
+                    <Typography sx={{fontWeight: 'bold'}} variant="h6" gutterBottom> Availability </Typography>
+                    <Typography variant="body1" gutterBottom> In Stock </Typography>
+                  </Grid>
 
-            <Button variant='contained' onClick={() => dispatch(Increment())}>
-              <Typography variant="h6" gutterBottom> - </Typography>
-            </Button>
-          </Grid>
+                <Grid container sx={{display: 'flex', height: 'auto', width: 'auto', justifyContent: 'center', alignItems: 'center'}}>
+                  <Button variant='contained' onClick={() => dispatch(Increment())}>
+                    <Typography variant="h6" gutterBottom> + </Typography>
+                  </Button>
+
+                  <Typography sx={{ml: 2, mr: 2}} variant="h5" gutterBottom>{myState}</Typography>
+
+                  <Button variant='contained' disabled={myState === 0} onClick={() => dispatch(Decrement())}>
+                    <Typography variant="h6" gutterBottom> - </Typography>
+                  </Button>
+
+                </Grid>
+
+                  <Grid>
+                    <Typography sx={{fontWeight: 'bold'}} variant="h6" gutterBottom> Total </Typography>
+                    <Typography variant="body1 " gutterBottom> $24.99 </Typography>
+                  </Grid>
+
+              </Grid>
+          </Box>
+
         </Grid>
       </Grid>
 

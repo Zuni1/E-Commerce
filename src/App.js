@@ -17,11 +17,11 @@ const App = () => {
         <Route path='/' element={<Container/>}>
           <Route element={<ProtectedRoute/>}>
             <Route index element={<Index/>}/>
+            <Route path='/movies' element={<Movies/>}/>
+            <Route path='/tv' element={<Tv/>}/>
+            <Route path='/free' element={<Free/>}/>
+            <Route path='/cart' element={<Cart/>}/>
           </Route>
-          <Route path='/movies' element={<Movies/>}/>
-          <Route path='/tv' element={<Tv/>}/>
-          <Route path='/free' element={<Free/>}/>
-          <Route path='/cart' element={<Cart/>}/>
           <Route path='/login' element={<Login/>}/>
         </Route>
       </Routes>

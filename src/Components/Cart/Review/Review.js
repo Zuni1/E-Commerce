@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import React from 'react'
 
 const Review = ({name, caption, review}) => {
@@ -15,7 +15,7 @@ const Review = ({name, caption, review}) => {
         <Box sx={style.box}>
             <Typography sx={{fontWeight: 'bold'}} variant="body1" gutterBottom> {name} </Typography>
             <Typography variant="caption" gutterBottom> {caption} </Typography>
-            <Typography sx={{fontWeight: 'bold'}} variant="body2" gutterBottom> {review} </Typography>
+            <Typography variant="body1" gutterBottom> {review} </Typography>
         </Box>
     )
 }

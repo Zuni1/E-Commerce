@@ -48,12 +48,15 @@ import { createSlice } from "@reduxjs/toolkit";
         state.movies = []
         state.error = action.payload
       },
-      Increment: (state, action) => {
-        state.cart = action.payload + 1
+      Increment: (state) => {
+        state.cart = state.cart + 1
+      },
+      Decrement: (state) => {
+        state.cart = state.cart - 1
       }
     }
   })
   
-export const {login, logout, fetchRequest, fetchSuccess, fetchFailure, Increment} = info.actions
+export const {login, logout, fetchRequest, fetchSuccess, fetchFailure, Increment, Decrement} = info.actions
 
 export default info.reducer

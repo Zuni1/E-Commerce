@@ -1,28 +1,16 @@
 import React from "react";
-import { Grid, Box, Button } from "@mui/material";
+import { Grid, Box } from "@mui/material";
 import { useDispatch } from 'react-redux'
 
 import Slider from "./Slider/Slider";
 import Movie from "./Movies/Movie";
-import {logout} from '../../Redux/Reducer'
 
 
 const Home = () => {
 
-    const dispatch = useDispatch()
-
     return (
         <Box style={{backgroundColor: "#041c2c"}}>
-            <Box sx={{bgcolor: 'background.default', color: 'text.primary'}}>
-                <Grid container sx={{justifyContent: 'flex-end', pr: 3, pb: 2}}>
-                    <Button  
-                        variant='contained' 
-                        onClick={() => dispatch(logout())}
-                    >
-                        Logout
-                    </Button>
-                </Grid>
-                
+            <Box sx={{bgcolor: 'background.default', color: 'text.primary'}}>                
                 <Slider/>
 
                 <Grid container item xs={12} md={12} sx={{padding: '20px', borderBottom: '1px solid #003452'}}>
