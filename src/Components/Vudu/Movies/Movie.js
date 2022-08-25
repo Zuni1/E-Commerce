@@ -1,7 +1,6 @@
 import React from 'react'
-import { Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import { useSelector } from 'react-redux'
-import {useDispatch} from 'react-redux'
 
 import { fetchRequest, fetchSuccess, fetchFailure } from '../../../Redux/Reducer';
 import MovieContainer from './MovieContainer';
@@ -24,10 +23,9 @@ export const fetchMovies = () => {
 const Movie = () => {
 
     const selector = useSelector((state) => state.user.movies)
-    const dispatch = useDispatch()
 
     return (
-        <>
+        <Box>
             {selector.map((data) => {
                 while (data.id < 4) {
                 return( 
@@ -59,7 +57,7 @@ const Movie = () => {
                 />
                 )}
             })}
-        </>
+        </Box>
     )
 }
 

@@ -1,6 +1,5 @@
-import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
+import React, { useLayoutEffect } from 'react'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import Container from './Navbar/Container'
 import ProtectedRoute from './Routes/ProtectedRoute'
 import Index from './Components/Vudu/Index'
@@ -10,9 +9,18 @@ import Free from './Components/Free/Free'
 import Cart from './Components/Cart/Cart' 
 import Login from './Components/Login/Login'
 
+const Wrapper = ({children}) => {
+  const location = useLocation();
+  useLayoutEffect(() => {
+    document.documentElement.scrollTo(0, 0);
+  }, [location.pathname]);
+  return children
+} 
+
 const App = () => {
   return (
     <BrowserRouter>
+    <Wrapper>
       <Routes>
         <Route path='/' element={<Container/>}>
           <Route element={<ProtectedRoute/>}>
@@ -25,6 +33,7 @@ const App = () => {
           <Route path='/login' element={<Login/>}/>
         </Route>
       </Routes>
+    </Wrapper>
     </BrowserRouter>
   )
 }

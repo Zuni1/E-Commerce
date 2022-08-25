@@ -37,7 +37,6 @@ const MovieContainer = ({name, src1, src2, src3, src4, src5, src6, src7}) => {
                 <MovieComponent src={src4} />
                 <MovieComponent src={src5} />
                 <MovieComponent src={src6} />
-                {/* <MovieComponent src={src7} /> */}
             </Grid>
         </Grid>
     )
