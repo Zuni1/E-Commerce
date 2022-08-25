@@ -1,10 +1,8 @@
 import React from "react";
 import { Grid, Box } from "@mui/material";
-import { useDispatch } from 'react-redux'
 
 import Slider from "./Slider/Slider";
 import Movie from "./Movies/Movie";
-
 
 const Home = () => {
 

@@ -2,20 +2,24 @@
   "movies": [
     {
       "id": 1,
+      "title": "New Releases",
       "name": "Orphan First Kill",
       "image": "https://images2.vudu.com/poster2/2072433-168"
     },
     {
       "id": 2,
+      "title": "Top 200 Movies",
       "name": "Black Phone",
       "image": "https://images2.vudu.com/poster2/2040357-168"
     },
     {
+      "title": "Deals of the Week",
       "name": "Black Phone",
       "image": "https://images2.vudu.com/poster2/2040357-168",
       "id": 3
     },
     {
+      "title": "In Theaters",
       "name": "DC League of Super-Pets",
       "image": "https://images2.vudu.com/poster2/2083672-168",
       "id": 4

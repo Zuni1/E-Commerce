@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Grid, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import {Link} from 'react-router-dom';
 
 const FooterComponent2 = ({name}) => {

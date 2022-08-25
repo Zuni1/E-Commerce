@@ -3,7 +3,7 @@ import storage from 'redux-persist/lib/storage'
 import {persistStore, persistReducer} from "redux-persist";
 
 import infoReducer from './Reducer'
-import { fetchMovies } from "./Reducer";
+import { fetchMovies } from "../Components/Vudu/Movies/Movie";
 
 export const persistConfig = {
     key: 'root',

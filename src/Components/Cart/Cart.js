@@ -34,6 +34,16 @@ const Card = () => {
     }
   }
 
+  const handleIncrement = () => {
+    dispatch(Increment())
+    console.log("1 item is added to Cart")
+  }
+
+  const handleDecrement = () => {
+    dispatch(Increment())
+    console.log("1 item is removed from Cart")
+  }
+
   return (
     <Grid sx={{bgcolor: 'background.default', color: 'text.primary'}}>
       <Grid style={style.box}>
@@ -50,6 +60,7 @@ const Card = () => {
             onChange={(event, newValue) => {
               setValue(newValue);
             }}
+
           />
           <Grid container sx={{display: 'flex', justifyContent: 'space-between', marginBottom: '15px', marginTop: '15px'}}>
             <Button sx={{width: '45%'}} variant="outlined">Trailer</Button>
@@ -63,7 +74,7 @@ const Card = () => {
           
           <Grid container sx={{display: 'flex', justifyContent: 'space-between', marginBottom: '15px'}}>
             <Button sx={{width: '45%'}} variant="contained">Buy $24.99</Button>
-            <Button sx={{width: '45%'}} variant="contained" onClick={() => dispatch(Increment())}>Add to Cart</Button>
+            <Button sx={{width: '45%'}} variant="contained" onClick={handleIncrement}>Add to Cart</Button>
           </Grid>
         </Box>
         
@@ -82,13 +93,13 @@ const Card = () => {
                   </Grid>
 
                 <Grid container sx={{display: 'flex', height: 'auto', width: 'auto', justifyContent: 'center', alignItems: 'center'}}>
-                  <Button variant='contained' onClick={() => dispatch(Increment())}>
+                  <Button variant='contained' onClick={handleIncrement}>
                     <Typography variant="h6" gutterBottom> + </Typography>
                   </Button>
 
                   <Typography sx={{ml: 2, mr: 2}} variant="h5" gutterBottom>{myState}</Typography>
 
-                  <Button variant='contained' disabled={myState === 0} onClick={() => dispatch(Decrement())}>
+                  <Button variant='contained' disabled={myState === 0} onClick={handleDecrement}>
                     <Typography variant="h6" gutterBottom> - </Typography>
                   </Button>
 
