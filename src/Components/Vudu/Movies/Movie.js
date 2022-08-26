@@ -12,7 +12,6 @@ const Movie = () => {
         <Box>
             {selector.map((data) => {
                 while (data.id < 4) {
-                // while (data.id === 2) {
                 return( 
                 <MovieContainer key={data.id} name={data.title} 
                     src1={data.image.one}
