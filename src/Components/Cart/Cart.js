@@ -34,10 +34,6 @@ const Card = () => {
     img: {
       borderRadius: '5px',
     },
-    items: {
-      padding: '20px',
-      width: '45%',
-    },
     review: {
       padding: '40px',
       borderBottom: '1px solid #003452',
@@ -64,9 +60,9 @@ const Card = () => {
           <img style={style.img} src={data.image} />
         </Grid>
 
-        <Box sx={style.items}>
+        <Grid container item md={6} sx={{padding: "20px", display: 'flex', flexDirection: 'column'}}>
             <Typography sx={{fontWeight: 'bold'}} variant="h5" gutterBottom>{data.name}</Typography>
-            <Typography variant="body1" gutterBottom>Drama | Music/Musical | Jun 24</Typography>
+            <Typography variant="body1" gutterBottom>{data.type} | {data.type2} | {data.date}</Typography>
             <Rating
               name="simple-controlled"
               value={value}
@@ -74,37 +70,37 @@ const Card = () => {
                 setValue(newValue);
               }}
             />
-            <Grid container sx={{display: 'flex', justifyContent: 'space-between', marginBottom: '15px', marginTop: '15px'}}>
-              <Button sx={{width: '45%'}} variant="outlined">Trailer</Button>
-              <Button sx={{width: '45%'}} variant="outlined">⊕ List</Button>
-            </Grid>
+            <Box sx={{display: 'flex', marginBottom: '15px', marginTop: '15px'}}>
+              <Button sx={{width: '40%', height: '40px', mr: 2}} variant="outlined">Trailer</Button>
+              <Button sx={{width: '40%', height: '40px'}} variant="outlined">⊕ List</Button>
+            </Box>
             
             <Typography variant="body1" gutterBottom>
               {showMore ? text : `${text.substring(0, 200)} ...`}
               <Button sx={{fontWeight: 'bold', marginLeft: '20px'}} onClick={() => setShowMore(!showMore)}> {showMore ? "Less" : "More"} </Button>
             </Typography>
             
-            <Grid container sx={{display: 'flex', justifyContent: 'space-between', marginBottom: '15px'}}>
-              <Button sx={{width: '45%'}} variant="contained">Buy $24.99</Button>
-              <Button sx={{width: '45%'}} variant="contained" onClick={handleIncrement}>Add to Cart</Button>
-            </Grid>
-        </Box>
+            <Box sx={{display: 'flex', justifyContent: 'space-between', marginBottom: '15px'}}>
+              <Button sx={{width: '45%', height: '50px'}} variant="contained">{data.price}</Button>
+              <Button sx={{width: '45%', height: '50px'}} variant="contained" onClick={handleIncrement}>Add to Cart</Button>
+            </Box>
+        </Grid>
         
-        <Grid container sx={{display: 'flex', flexDirection: 'column', ml: '8%'}}>
+        <Grid container items md={8} sx={{display: 'flex', flexDirection: 'column'}}>
           <Typography variant="h5" gutterBottom>Your Cart</Typography>
 
           <Box sx={{border: '1px solid #003452', padding: '10px'}}>
-            <Typography sx={{fontWeight: 'bold'}} variant="h5" gutterBottom>Elvis</Typography>
+            <Typography sx={{fontWeight: 'bold'}} variant="h5" gutterBottom>{data.name}</Typography>
             
               <Grid sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
                 <img style={style.img} src={data.image} />
 
-                <Grid>
-                    <Typography sx={{fontWeight: 'bold'}} variant="h6" gutterBottom> Availability </Typography>
-                    <Typography variant="body1" gutterBottom> In Stock </Typography>
-                  </Grid>
+                <Box>
+                  <Typography sx={{fontWeight: 'bold'}} variant="h6" gutterBottom> Availability </Typography>
+                  <Typography variant="body1" gutterBottom> In Stock </Typography>
+                </Box>
 
-                <Grid container sx={{display: 'flex', height: 'auto', width: 'auto', justifyContent: 'center', alignItems: 'center'}}>
+                <Box sx={{display: 'flex', height: 'auto', width: 'auto', justifyContent: 'center', alignItems: 'center'}}>
                   <Button variant='contained' onClick={handleIncrement}>
                     <Typography variant="h6" gutterBottom> + </Typography>
                   </Button>
@@ -114,13 +110,12 @@ const Card = () => {
                   <Button variant='contained' disabled={myState === 0} onClick={handleDecrement}>
                     <Typography variant="h6" gutterBottom> - </Typography>
                   </Button>
+                </Box>
 
-                </Grid>
-
-                  <Grid>
+                  <Box>
                     <Typography sx={{fontWeight: 'bold'}} variant="h6" gutterBottom> Total </Typography>
                     <Typography variant="body1 " gutterBottom> {data.price} </Typography>
-                  </Grid>
+                  </Box>
 
               </Grid>
           </Box>

@@ -12,15 +12,16 @@ const Movie = () => {
         <Box>
             {selector.map((data) => {
                 while (data.id < 4) {
+                // while (data.id === 2) {
                 return( 
                 <MovieContainer key={data.id} name={data.title} 
-                    src1='https://images2.vudu.com/poster2/2072603-168' 
-                    src2='https://images2.vudu.com/poster2/2019422-168'
-                    src3='https://images2.vudu.com/poster2/2054583-168'
-                    src4='https://images2.vudu.com/poster2/2032387-168'
-                    src5='https://images2.vudu.com/poster2/2082195-168'
-                    src6='https://images2.vudu.com/poster2/2071695-168'
-                    src7='https://images2.vudu.com/poster2/2040110-168'
+                    src1={data.image.one}
+                    src2={data.image.two}
+                    src3={data.image.three}
+                    src4={data.image.four}
+                    src5={data.image.five}
+                    src6={data.image.six}
+                    src7={data.image.seven}
                 />
                 )}
             })}
@@ -31,13 +32,13 @@ const Movie = () => {
                 while (data.id === 4) {
                 return( 
                 <MovieContainer key={data.id} name={data.title} 
-                    src1='https://images2.vudu.com/poster2/2072603-168' 
-                    src2='https://images2.vudu.com/poster2/2019422-168'
-                    src3='https://images2.vudu.com/poster2/2054583-168'
-                    src4='https://images2.vudu.com/poster2/2032387-168'
-                    src5='https://images2.vudu.com/poster2/2082195-168'
-                    src6='https://images2.vudu.com/poster2/2071695-168'
-                    src7='https://images2.vudu.com/poster2/2040110-168'
+                    src1={data.image.one}
+                    src2={data.image.two}
+                    src3={data.image.three}
+                    src4={data.image.four}
+                    src5={data.image.five}
+                    src6={data.image.six}
+                    src7={data.image.seven}
                 />
                 )}
             })}
